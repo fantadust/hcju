@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-@SpringBootApplication(scanBasePackages = "com.hcju.dubbo.consumer.controller")
+@SpringBootApplication
 public class DubboConsumerDemo {
 
     public static void main(String[] args) {
