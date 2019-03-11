@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoConsumerController {
 
 
-    @Reference(version = "1.0.0")
+    @Reference(version = "1.0.0", loadbalance = "roundrobin")
     private DemoService demoService;
 
     @RequestMapping("/sayHello")
