@@ -14,9 +14,11 @@ public class DemoConsumerController {
 
     @RequestMapping("/sayHello")
     public String sayHello(String name) {
-        System.out.println("job");
+
+        long a = System.currentTimeMillis();
 
         String xxx = demoService.sayHello(name);
+        System.out.println(System.currentTimeMillis()-a);
 
 
         return xxx;

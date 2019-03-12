@@ -7,6 +7,8 @@ import com.hcju.frame.data.JsonMapper;
 import org.apache.dubbo.config.annotation.Service;
 import org.apache.dubbo.rpc.RpcContext;
 
+import java.util.UUID;
+
 
 @Service(version = "${demo.service.version}")
 public class DefaultDemoService implements DemoService {
@@ -18,7 +20,9 @@ public class DefaultDemoService implements DemoService {
 
         sb.append(JsonMapper.encodeSilent(RpcContext.getContext().getUrl()));
 
+        String data = String.format(" %s Hello %s %s %s ", TimeProcesser.getDateByUnixTime(), name, UUID.randomUUID().toString(), sb.toString());
 
-        return TimeProcesser.getDateByUnixTime(TimeProcesser.getUnixTime()) + " Hello, " + name + "  ===== " + sb.toString();
+
+        return data;
     }
 }
