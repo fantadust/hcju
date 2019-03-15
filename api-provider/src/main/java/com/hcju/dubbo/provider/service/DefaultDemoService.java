@@ -25,4 +25,9 @@ public class DefaultDemoService implements DemoService {
 
         return data;
     }
+
+    @Override
+    public int sayHello2(Object data) {
+        return TimeProcesser.getUnixTime();
+    }
 }

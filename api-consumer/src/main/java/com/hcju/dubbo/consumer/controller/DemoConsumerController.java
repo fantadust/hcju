@@ -18,8 +18,10 @@ public class DemoConsumerController {
         long a = System.currentTimeMillis();
 
         String xxx = demoService.sayHello(name);
-        System.out.println(System.currentTimeMillis()-a);
+        System.out.println(System.currentTimeMillis() - a);
 
+        int b = demoService.sayHello2(xxx);
+        System.out.println(b);
 
         return xxx;
     }
